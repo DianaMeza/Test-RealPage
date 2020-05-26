@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class User creates an account</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class User creates an account</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; User creates an account</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m37.99s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">User can create an account</td>
+<td class="success">1m6.47s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can log in account</td>
+<td class="success">31.517s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Feature: User creates an account
+
+  Scenario: User can create an account      ?[90m# src/test/resources/features/createaccount/createaccount.feature:3?[0m
+17:30:09.733 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+User can create an account(user-creates-an-account;user-can-create-an-account)
+-------------------------------------------------------------------
+17:30:15.251 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+17:30:15.251 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mDiana?[0m?[32m is on HomePage?[0m              ?[90m# RegisterStepDefinitions.the_user_is_on_HomePage(String)?[0m
+    ?[32mWhen ?[0m?[32mthe user clicks on Sign in?[0m         ?[90m# RegisterStepDefinitions.the_user_clicks_on_Sign_in()?[0m
+    ?[32mAnd ?[0m?[32muser enters ?[0m?[32m?[1mdianaj02.meza@gmail.com?[0m ?[90m# RegisterStepDefinitions.user_enters_email(String)?[0m
+    ?[32mAnd ?[0m?[32mUser Clicks create account?[0m          ?[90m# RegisterStepDefinitions.user_Clicks_create_account()?[0m
+    ?[32mAnd ?[0m?[32mUser fills sign up form?[0m             ?[90m# RegisterStepDefinitions.user_fills_sign_up_form(String&gt;)?[0m
+    ?[32mAnd ?[0m?[32mUser clicks register?[0m                ?[90m# RegisterStepDefinitions.user_clicks_register()?[0m
+    ?[32mThen ?[0m?[32mthe user is taken my account page?[0m  ?[90m# RegisterStepDefinitions.the_user_is_taken_my_account_page()?[0m
+
+  Scenario: User can log in account             ?[90m# src/test/resources/features/createaccount/createaccount.feature:13?[0m
+17:31:17.114 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+User can log in account(user-creates-an-account;user-can-log-in-account)
+-------------------------------------------------------------------
+17:31:17.652 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+17:31:17.652 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mDiana?[0m?[32m has a valid account?[0m             ?[90m# LoginStepDefinitions.has_a_valid_account(String)?[0m
+    ?[32mWhen ?[0m?[32mwhen user clicks on sign in?[0m            ?[90m# LoginStepDefinitions.when_user_clicks_on_sign_in()?[0m
+    ?[32mAnd ?[0m?[32menters ?[0m?[32m?[1mdianaj02.meza@gmail.com?[0m?[32m as email?[0m ?[90m# LoginStepDefinitions.enters_email(String)?[0m
+    ?[32mAnd ?[0m?[32menters ?[0m?[32m?[1mtest123?[0m?[32m as password?[0m              ?[90m# LoginStepDefinitions.enters_password(String)?[0m
+    ?[32mAnd ?[0m?[32mclicks sign in?[0m                          ?[90m# LoginStepDefinitions.clicks_sign_in()?[0m
+    ?[32mThen ?[0m?[32mthe user is successfully logged in?[0m     ?[90m# LoginStepDefinitions.the_user_is_successfully_logged_in()?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>may 25, 2020 5:30:12 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 13262
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+may 25, 2020 5:30:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+may 25, 2020 5:31:17 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 22704
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+may 25, 2020 5:31:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.4.1</a> at 25/05/2020 05:32:01 PM</p>
+</div>
+</div>
+</body>
+</html>

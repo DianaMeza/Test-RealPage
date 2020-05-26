@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity and Cucumber Quick Start</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="7834fa9f5d7fdbf1f2b7e1c8fd0c1c15ea944610189326b38ba374afe2094b38.html">User Creates An Account</a></span>
+                > <span class="truncate-60"><a
+                    href="3ce4d68682c8cf825d92d59fdcf0302d8b5bbd8f3a930fca2bb6d0acbed58e56.html">User can create an account </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2020 17:30</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">User Creates An Account </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">User can create an account
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4a4620a83192ac413e9aa7629176f88eb98c5073997edc86a682be803f37ea98.png" title=" Given Diana is on HomePage" width="1440"/>
+                <img src="4a4620a83192ac413e9aa7629176f88eb98c5073997edc86a682be803f37ea98.png" title=" Diana opens the home page" width="1440"/>
+                <img src="4a4620a83192ac413e9aa7629176f88eb98c5073997edc86a682be803f37ea98.png" title=" Diana opens the Practice home page" width="1440"/>
+                <img src="4a4620a83192ac413e9aa7629176f88eb98c5073997edc86a682be803f37ea98.png" title=" Diana opens the home page (completed)" width="1440"/>
+                <img src="4a4620a83192ac413e9aa7629176f88eb98c5073997edc86a682be803f37ea98.png" title=" Given Diana is on HomePage (completed)" width="1440"/>
+                <img src="9caf04da33d42f94bad09e7278d7b8a6cc07975a166f54fa9e5768be22c6a261.png" title=" When the user clicks on Sign in" width="1440"/>
+                <img src="9caf04da33d42f94bad09e7278d7b8a6cc07975a166f54fa9e5768be22c6a261.png" title=" Diana clicks on sign in" width="1440"/>
+                <img src="9caf04da33d42f94bad09e7278d7b8a6cc07975a166f54fa9e5768be22c6a261.png" title=" Diana clicks on [By.className: login]" width="1440"/>
+                <img src="aa257b81669a350549eabbcf2d8ad3bff756f6600031eefb2fddda2f4224367d.png" title=" Diana clicks on [By.className: login] (completed)" width="1440"/>
+                <img src="aa257b81669a350549eabbcf2d8ad3bff756f6600031eefb2fddda2f4224367d.png" title=" Diana clicks on sign in (completed)" width="1440"/>
+                <img src="aa257b81669a350549eabbcf2d8ad3bff756f6600031eefb2fddda2f4224367d.png" title=" When the user clicks on Sign in (completed)" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" And user enters dianaj02.meza@gmail.com" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" Diana enter email to register" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" Diana enters 'dianaj02.meza@gmail.com' into By.id: email_create" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" Diana clicks on [By.id: create-account_form]" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" Diana clicks on [By.id: create-account_form] (completed)" width="1440"/>
+                <img src="8ac36512bd5e6c0a584603aeb540030c2ca66adf40e1db17006e3723ee425c1d.png" title=" Diana clicks on [By.id: SubmitCreate]" width="1440"/>
+                <img src="6bb2063e62fbd7c3b489444a5c4301491c41fe19e90a342a3d0caae5b12a6420.png" title=" Diana clicks on [By.id: SubmitCreate] (completed)" width="1440"/>
+                <img src="6bb2063e62fbd7c3b489444a5c4301491c41fe19e90a342a3d0caae5b12a6420.png" title=" Diana enter email to register (completed)" width="1440"/>
+                <img src="b491b59deb0fb4292aef9e8598133a2a110b99f9814b8d103a5946598671e9b4.png" title=" And user enters dianaj02.meza@gmail.com (completed)" width="1440"/>
+                <img src="41c5b59d98b818c881990c3186c51ccd7c40f43d926d7601b770a6943bf5229c.png" title=" And User Clicks create account" width="1440"/>
+                <img src="5336462157ff8630e2d3180e97f3dc949269c623b0c685ea745ed979f5094f41.png" title=" And User fills sign up form
+| Diana | Meza | test123 | Diana | Meza | Real Page | Test Address 1 | Test Address 2 | Medellin | 00000 | Additonal Information | +57 6138453 | +57 3015289631 | Home |" width="1440"/>
+                <img src="5336462157ff8630e2d3180e97f3dc949269c623b0c685ea745ed979f5094f41.png" title=" Diana clicks on [By.id: id_gender2]" width="1440"/>
+                <img src="5336462157ff8630e2d3180e97f3dc949269c623b0c685ea745ed979f5094f41.png" title=" Diana enters 'Diana' into By.id: customer_firstname" width="1440"/>
+                <img src="df6650c221c07b89c8ce065b525479a29f2896e21c1bd21dc6cd9650efe2a988.png" title=" Diana enters 'Diana' into By.id: customer_firstname (completed)" width="1440"/>
+                <img src="df6650c221c07b89c8ce065b525479a29f2896e21c1bd21dc6cd9650efe2a988.png" title=" Diana enters 'Meza' into By.id: customer_lastname" width="1440"/>
+                <img src="a8bd3c2de6007685d049dc445685565fab14ae1020f0d0168fcddd75cbd8a578.png" title=" Diana enters 'Meza' into By.id: customer_lastname (completed)" width="1440"/>
+                <img src="a8bd3c2de6007685d049dc445685565fab14ae1020f0d0168fcddd75cbd8a578.png" title=" Diana enters 'test123' into By.id: passwd" width="1440"/>
+                <img src="c2eede81318ff3b0575d052a94277dc41f7ef12bd118649b5d834dc4cc127430.png" title=" Diana enters 'test123' into By.id: passwd (completed)" width="1440"/>
+                <img src="c2eede81318ff3b0575d052a94277dc41f7ef12bd118649b5d834dc4cc127430.png" title=" Diana clicks on [By.xpath: //*[@id='days']//option[7]]" width="1440"/>
+                <img src="daaca2ad35b5b706da5aea90678c30879b78952bc89dad16961a0a7acc411eac.png" title=" Diana clicks on [By.xpath: //*[@id='days']//option[7]] (completed)" width="1440"/>
+                <img src="daaca2ad35b5b706da5aea90678c30879b78952bc89dad16961a0a7acc411eac.png" title=" Diana clicks on [By.xpath: //*[@id='months']//option[4]]" width="1440"/>
+                <img src="392675312c74b076a0a2169dea7c4df43c860f3d45315de87ca79e9d9d8b4fd7.png" title=" Diana clicks on [By.xpath: //*[@id='months']//option[4]] (completed)" width="1440"/>
+                <img src="392675312c74b076a0a2169dea7c4df43c860f3d45315de87ca79e9d9d8b4fd7.png" title=" Diana clicks on [By.xpath: //*[@id='years']//option[31]]" width="1440"/>
+                <img src="b52b1dd102c4d361d5e4bb1d710aee839f91ce2e101e6558e77feeae80fff40f.png" title=" Diana clicks on [By.xpath: //*[@id='years']//option[31]] (completed)" width="1440"/>
+                <img src="b52b1dd102c4d361d5e4bb1d710aee839f91ce2e101e6558e77feeae80fff40f.png" title=" Diana clicks on [By.id: newsletter]" width="1440"/>
+                <img src="118d7388a9dfcd1a34b1a01c98b4e2f8bf631375cc614ffc618655d0554adc32.png" title=" Diana clicks on [By.id: newsletter] (completed)" width="1440"/>
+                <img src="118d7388a9dfcd1a34b1a01c98b4e2f8bf631375cc614ffc618655d0554adc32.png" title=" Diana clicks on [By.id: optin]" width="1440"/>
+                <img src="eb770059d873d1f64e9b4b6ddf384b3a36520e0c2c43ef70754c72a6f9db9a98.png" title=" Diana clicks on [By.id: optin] (completed)" width="1440"/>
+                <img src="eb770059d873d1f64e9b4b6ddf384b3a36520e0c2c43ef70754c72a6f9db9a98.png" title=" Diana enters 'Real Page' into By.id: company" width="1440"/>
+                <img src="49778c5a31a8bec73f267576aeba78e3e1298b09ce0a1785d8750ac83531f263.png" title=" Diana enters 'Real Page' into By.id: company (completed)" width="1440"/>
+                <img src="22c412bce5197a21ad82e7aadee2b43775ae1feee297d6c0ad789a83b81a9d5f.png" title=" Diana enters 'Test Address 1' into By.id: address1" width="1440"/>
+                <img src="23ee969adee3a6dabdb4bae9bc7c1b74007553bd1c4e0ae4f98fe8e8aa54eb57.png" title=" Diana enters 'Test Address 1' into By.id: address1 (completed)" width="1440"/>
+                <img src="23ee969adee3a6dabdb4bae9bc7c1b74007553bd1c4e0ae4f98fe8e8aa54eb57.png" title=" Diana enters 'Test Address 2' into By.id: address2" width="1440"/>
+                <img src="035dd5014a223c978674d68b4ce1fb68502347848e0ade10a9c56ae74170756f.png" title=" Diana enters 'Test Address 2' into By.id: address2 (completed)" width="1440"/>
+                <img src="035dd5014a223c978674d68b4ce1fb68502347848e0ade10a9c56ae74170756f.png" title=" Diana enters 'Medellin' into By.id: city" width="1440"/>
+                <img src="2aa159b59f8709bb11d9dbb05a41224d6885961ecd3d27b6af8f6e4af68a3c99.png" title=" Diana enters 'Medellin' into By.id: city (completed)" width="1440"/>
+                <img src="2aa159b59f8709bb11d9dbb05a41224d6885961ecd3d27b6af8f6e4af68a3c99.png" title=" Diana clicks on [By.xpath: //*[@id='id_state']//option[6]]" width="1440"/>
+                <img src="bcd9ace3665456fcea428b75fec0ce2021222e98a1ee529e95d6e3fc008244eb.png" title=" Diana clicks on [By.xpath: //*[@id='id_state']//option[6]] (completed)" width="1440"/>
+                <img src="bcd9ace3665456fcea428b75fec0ce2021222e98a1ee529e95d6e3fc008244eb.png" title=" Diana enters '00000' into By.id: postcode" width="1440"/>
+                <img src="f269780099838989304df8a117d660615c596fbd6a75af6ddc9a15b371d2e3e3.png" title=" Diana enters '00000' into By.id: postcode (completed)" width="1440"/>
+                <img src="f269780099838989304df8a117d660615c596fbd6a75af6ddc9a15b371d2e3e3.png" title=" Diana enters 'Additonal Information' into By.id: other" width="1440"/>
+                <img src="1a17906e3bdf6c0c3d4203bcb5bde88e569f00e92f5e35998dded1d3326b4263.png" title=" Diana enters 'Additonal Information' into By.id: other (completed)" width="1440"/>
+                <img src="1a17906e3bdf6c0c3d4203bcb5bde88e569f00e92f5e35998dded1d3326b4263.png" title=" Diana enters '+57 6138453' into By.id: phone" width="1440"/>
+                <img src="95912f4ae91fd44372f6db5322c1259134f75f8607c94c51209d6a1e3365233d.png" title=" Diana enters '+57 6138453' into By.id: phone (completed)" width="1440"/>
+                <img src="95912f4ae91fd44372f6db5322c1259134f75f8607c94c51209d6a1e3365233d.png" title=" Diana enters '+57 3015289631' into By.id: phone_mobile" width="1440"/>
+                <img src="e83c50c8d68b434d94d546155501ac9fe66fbd344b107f2e2316f14c46c3881f.png" title=" Diana enters '+57 3015289631' into By.id: phone_mobile (completed)" width="1440"/>
+                <img src="e83c50c8d68b434d94d546155501ac9fe66fbd344b107f2e2316f14c46c3881f.png" title=" Diana enters 'Home' into By.id: alias" width="1440"/>
+                <img src="3b3303735c2739fcc58d277a5fe3ab8931b790367cf27309d28a47287198f65f.png" title=" Diana enters 'Home' into By.id: alias (completed)" width="1440"/>
+                <img src="3b3303735c2739fcc58d277a5fe3ab8931b790367cf27309d28a47287198f65f.png" title=" And User fills sign up form
+| Diana | Meza | test123 | Diana | Meza | Real Page | Test Address 1 | Test Address 2 | Medellin | 00000 | Additonal Information | +57 6138453 | +57 3015289631 | Home | (completed)" width="1440"/>
+                <img src="362375de7fa84f8e18e6616bbd1dce9008b297d84b0f19c702d0d3271977de33.png" title=" And User clicks register" width="1440"/>
+                <img src="362375de7fa84f8e18e6616bbd1dce9008b297d84b0f19c702d0d3271977de33.png" title=" Diana click on" width="1440"/>
+                <img src="2ff2c826e3be7530a1e03ff7d62d99770a110f260ec1e4d48d718d213690f431.png" title=" Diana clicks on [By.id: submitAccount]" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" Diana clicks on [By.id: submitAccount] (completed)" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" Diana click on (completed)" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" And User clicks register (completed)" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" Then the user is taken my account page" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" Then The profile name should be Predicates.equalTo(Diana Meza)" width="1440"/>
+                <img src="93d6db96c0e50fef7dbe9aedf6d7680b76fb923f4be3843fbf24a4f351da47a4.png" title=" Then the user is taken my account page (completed): <span class='success-color'>SUCCESS</span>" width="1440"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.7</span>
+</div>
+</body>
+</html>
